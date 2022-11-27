@@ -79,6 +79,17 @@ public class Lambda01 {
                 forEach(Lambda01::yazdir);
     }
 
+    public static boolean ciftBul(int a) {
+        return a % 2 == 0;
+    }
+    public static void printCiftElFunctional1(List<Integer> sayi) {
+
+        sayi.
+                stream().
+                filter(Lambda01::ciftBul).
+                forEach(Lambda01::yazdir);
+    }
+
     //TASK  : structural Programming ile list elemanlarinin  cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
     public static void printCiftElStructured(List<Integer> sayi) {
         for (Integer w : sayi) {
@@ -93,26 +104,28 @@ public class Lambda01 {
 
         sayi.
                 stream().
-                filter(t -> t % 2 == 0 ).
-                filter( t -> t < 34).
+                filter(t -> t % 2 == 0).
+                filter(t -> t < 34).
                 forEach(Lambda01::yazdir);
 
     }
+
     public static void printCiftOtStructured(List<Integer> sayi) {
 
         for (Integer w : sayi) {
-            if (w%2==0&& w<34){
-                System.out.println(w+" ");
+            if (w % 2 == 0 && w < 34) {
+                System.out.println(w + " ");
             }
 
         }
 
     }
+
     //Task : functional Programming ile list elemanlarinin 34 den buyk veya cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
-    public static void printCiftOtzBykFunctional(List<Integer> sayi){
+    public static void printCiftOtzBykFunctional(List<Integer> sayi) {
         sayi.
                 stream().
-                filter(t -> t%2==0 || t>34).
+                filter(t -> t % 2 == 0 || t > 34).
                 forEach(Lambda01::yazdir);
     }
 }
