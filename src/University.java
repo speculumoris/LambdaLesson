@@ -1,5 +1,3 @@
-package lambdapractice01;
-
 public class University {
     private  String university ;
     private String bolum;

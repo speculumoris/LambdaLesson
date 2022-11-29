@@ -1,5 +1,3 @@
-import lambdapractice01.University;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
