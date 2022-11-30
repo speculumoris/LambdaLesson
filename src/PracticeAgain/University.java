@@ -1,3 +1,5 @@
+package PracticeAgain;
+
 public class University {
     private  String university ;
     private String bolum;
@@ -48,11 +50,11 @@ public class University {
 
     @Override
     public String toString() {
-        return "University{" +
+        return "PracticeAgain.University{" +
                 "university='" + university + '\'' +
                 ", bolum='" + bolum + '\'' +
                 ", ogrSayisi=" + ogrSayisi +
                 ", notOrt=" + notOrt +
-                '}';
+                '}'+"\n";
     }
 }

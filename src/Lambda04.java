@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import PracticeAgain.University;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Lambda04 {
@@ -26,6 +25,12 @@ fields --> Universite (String)
         System.out.println(matBolumVarMi(unv));
         System.out.println();
         System.out.println(ogrenciSayilaribuyuktenKucuge(unv));
+        System.out.println();
+        System.out.println(matSayisi(unv));
+        System.out.println();
+        System.out.println(enBuyukNotOrt(unv));
+        System.out.println();
+        System.out.println(enKucukNotOrt(unv));
 
     }
     //task 01--> butun univ'lerin notOrt'larinin 74' den buyuk oldg kontrol eden pr create ediniz.
@@ -47,5 +52,25 @@ fields --> Universite (String)
                 sorted(Comparator.comparing(University::getOgrSayisi).reversed()).
                 collect(Collectors.toList());
 
+    }
+    //task 04-->"matematik" bolumlerinin sayisini  print ediniz.
+    public static int matSayisi(List<University> unv){
+        return (int) (unv.stream().filter(t -> t.getBolum().contains("mat")).count());
+    }
+    //task 05-->Ogrenci sayilari 550'dan fazla olan universite'lerin en buyuk notOrt'unu bulunuz.
+    public static OptionalInt enBuyukNotOrt(List<University> unv){
+        return unv.
+                stream().
+                filter(t -> t.getOgrSayisi() > 550).
+                mapToInt(University::getNotOrt).
+                max();
+    }
+    //task 06-->Ogrenci sayilari 1050'dan az olan universite'lerin en kucuk notOrt'unu bulunuz.
+    public static OptionalInt enKucukNotOrt(List<University> unv){
+        return unv.
+                stream().
+                filter(t -> t.getOgrSayisi() <1050).
+                mapToInt(University::getNotOrt).
+                min();
     }
 }

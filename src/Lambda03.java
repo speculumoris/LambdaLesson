@@ -11,6 +11,8 @@ public class Lambda03 {
 
         alfBykTekrsz(menu);
         System.out.println("\n=====================");
+        chrSayisiByksirali(menu);
+        System.out.println("\n=====================");
         tersSrlTkrrsizCNum(menu);
         System.out.println("\n=====================");
         harfSayisi7denAzkontrol(menu);
@@ -46,7 +48,7 @@ public class Lambda03 {
         ikram.
                 stream().
                 sorted(Comparator.comparing(String::length)).
-                forEach(t-> System.out.println(t+" "));
+                forEach(t-> System.out.print(t+" "));
     }
 
     // ******************************************************************************************
